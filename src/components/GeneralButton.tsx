@@ -1,4 +1,4 @@
-import { StyledGeneralButton } from "./style"
+import { StyledGeneralButton } from './style'
 
 type GeneralButtonType = {
   title: string
@@ -6,8 +6,9 @@ type GeneralButtonType = {
   fontsize: string
   classname?: string
   idName?: string
-  buttonType?: "button" | "submit" | "reset" | undefined
+  buttonType?: 'button' | 'submit' | 'reset' | undefined
   buttonDisabled?: boolean | undefined
+  onClickBehaviour?: (() => void) | undefined
 }
 
 const GeneralButton = ({
@@ -17,7 +18,8 @@ const GeneralButton = ({
   classname = 'default-button-classname',
   idName = 'default-button-id',
   buttonType = 'button',
-  buttonDisabled = undefined
+  buttonDisabled = undefined,
+  onClickBehaviour = undefined,
 }: GeneralButtonType) => {
   return (
     <StyledGeneralButton
@@ -27,6 +29,7 @@ const GeneralButton = ({
       id={idName}
       type={buttonType}
       disabled={buttonDisabled}
+      onClick={onClickBehaviour}
     >
       {title}
     </StyledGeneralButton>

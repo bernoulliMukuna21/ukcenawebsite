@@ -8,12 +8,7 @@ import backgroundImage4 from '../assets/backgroundImage4.jpg'
 import JoinUsButton from './GeneralButton'
 import { COMPANY_NAME } from '../data/constants'
 
-const allBackGroundImages = [
-  backgroundImage1,
-  backgroundImage2,
-  backgroundImage3,
-  backgroundImage4
-]
+const allBackGroundImages = [backgroundImage1, backgroundImage2, backgroundImage3, backgroundImage4]
 
 const StemProfessions = () => {
   const firstImageToShow = Math.floor(Math.random() * 4)
@@ -26,26 +21,21 @@ const StemProfessions = () => {
   })
 
   useEffect(() => {
-    const interval = setInterval(() => setCurrentImage(state => (state + 1) % 4), 5000)
+    const interval = setInterval(() => setCurrentImage((state) => (state + 1) % 4), 5000)
     return () => clearInterval(interval)
   }, [currentImage])
 
   return (
     <StyledStemProfessionsDiv>
-      {
-        transitions((styles, item) => {
-          return (<animated.img style={styles} src={item} alt=""/>)
-        })
-      }
-      <div className='get-started'>
+      {transitions((styles, item) => {
+        return <animated.img style={styles} src={item} alt="" />
+      })}
+      <div className="get-started">
         <h1>{COMPANY_NAME}</h1>
-        <p>Join the <i>Congolese</i> STEM Student Community and Unleash Your Inner Science Ninja!</p>
-        <JoinUsButton
-          title='Get Started'
-          backgroundcolor='transparent'
-          fontsize='2'
-          classname='get-started'
-        />
+        <p>
+          Join the <i>Congolese</i> STEM Student Community and Unleash Your Inner Science Ninja!
+        </p>
+        <JoinUsButton title="Get Started" backgroundcolor="transparent" fontsize="2" classname="get-started" />
       </div>
     </StyledStemProfessionsDiv>
   )
