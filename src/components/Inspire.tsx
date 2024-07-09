@@ -23,7 +23,7 @@ const Inspire = () => {
           </li>
           <li>
             <h1>10+</h1>
-            <h1>Conferences Held</h1>
+            <h1>Conferences <br/> Held</h1>
           </li>
         </ul>
       </section>
@@ -35,9 +35,24 @@ const Inspire = () => {
         </h1>
         <p>Discover the Exciting World of STEM with {COMPANY_NAME}</p>
         <section>
-          <GeneralButton title="Start Your Journey" backgroundcolor={theme.color.blue} fontsize="2" idName="start-your-journey" />
+
+        <GeneralButton
+        title="Start Your Journey"
+        backgroundcolor={theme.color.blue}
+        fontsize="2"
+        idName="start-your-journey"
+        
+/>
+
+
           <Link to="/team">
-            <GeneralButton title="Learn More" backgroundcolor={theme.color.green} fontsize="2" />
+          <GeneralButton
+  title="Learn More"
+  backgroundcolor={theme.color.green}
+  fontsize="2"
+ 
+/>
+
           </Link>
         </section>
       </section>

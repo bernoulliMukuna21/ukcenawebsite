@@ -6,7 +6,15 @@ type ButtonPropsType = {
 }
 
 export const StyledGeneralButton = styled.button<ButtonPropsType>`
-  color: white;
+  
+@media (max-width: 800px) {
+
+    
+
+     }
+
+
+color: white;
   background-color: ${(props) => props.backgroundcolor};
   padding: 1.5rem 2.5rem;
   border-radius: 2rem;
@@ -70,9 +78,29 @@ export const StyledStemProfessionsDiv = styled.div`
       background-color: ${(props) => props.theme.color.blue};
     }
   }
+    @media (max-width: 767px) {
+    img{
+      max-width: 100%;
+      // display: block;
+      // margin: 0;
+      // height: 80vh;
+      // max-width: 100vw;
+      // object-fit: cover;
+      // z-index: 1;
+    }
+
+
+}
 `
 
+
+
 export const StyledAboutUsDiv = styled.div`
+
+
+
+
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,18 +118,61 @@ export const StyledAboutUsDiv = styled.div`
 
   > section:first-child {
     margin-right: 3rem;
+   
   }
+
 
   > section:last-child {
     margin-left: 3rem;
     width: 35%;
   }
   > section:last-child h1 {
-    font-size: 7rem;
+    font-size: 10rem;
+   
+    align-item:center;
   }
   > section:last-child p {
     margin: 2rem;
   }
+
+
+   @media (max-width: 600px) {
+   
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:100% ;   
+    
+    padding: 0 0;
+    margin-top:2rem;
+
+    img {
+    display: block;
+    max-width:40rem;
+    object-fit: cover;
+    border-radius: 2rem;
+   
+  }
+   > section:last-child {
+    margin-left: 3rem;
+    width: 90%;
+    
+   
+  }
+
+  > section:last-child h1 {
+    font-size: 5rem;
+    opacity:0.7;
+    align-item:center;
+    text-align:center;
+  }
+    
+  > section:first-child {
+    margin-left: 3rem;
+   
+  }
+  
+    }
 `
 
 export const StyledInspireDiv = styled.div`
@@ -109,6 +180,7 @@ export const StyledInspireDiv = styled.div`
   background-color: white;
   padding-top: 5rem;
   font-size: 2rem;
+
 
   .first-section h1 {
     font-size: 4rem;
@@ -152,6 +224,49 @@ export const StyledInspireDiv = styled.div`
     margin: 0 2rem;
     border-radius: 5rem;
   }
+
+ @media (max-width: 600px) {
+  .first-section > p{
+    font-weight: bolder;
+  }
+   
+  .second-section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+      align-item:center;
+    
+  }
+
+  .second-section ul li h1,
+  .third-section h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+     
+  }
+
+  li{
+    padding-top:2rem;
+  }
+
+   .first-section h1 {
+    font-size: 3rem;
+  }
+
+  .first-section {
+  
+    margin: 0 2.8rem;
+  }
+
+  .first-section p {
+    font-size: 2rem;
+  }
+  
+  .third-section section button:first-child {
+    margin-bottom: 2rem
+  }
+}
 `
 
 export const StyledEmpowerDiv = styled.div`
@@ -176,6 +291,9 @@ export const StyledEmpowerDiv = styled.div`
 `
 
 export const StyledConnectWithUs = styled.div`
+
+
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,7 +309,7 @@ export const StyledConnectWithUs = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    width: 100vh;
+    width: 80vh;
   }
 
   form input,
@@ -258,6 +376,12 @@ export const StyledConnectWithUs = styled.div`
     padding: 4rem 0;
   }
 
+
+
+
+
+
+
   .other-connect-types div {
     padding: 5rem 3rem;
     border-radius: 3rem;
@@ -267,6 +391,11 @@ export const StyledConnectWithUs = styled.div`
   .other-connect-types h1 {
     font-size: 3rem;
   }
+
+
+
+
+
   .other-connect-types p {
     font-size: 2rem;
   }
@@ -294,4 +423,50 @@ export const StyledConnectWithUs = styled.div`
     color: green;
     font-weight: bold;
   }
+
+
+
+  @media (max-width: 767px) {
+ 
+
+    connect-with-us-body{
+     width:fit-content;
+    }
+.email-connect{
+ width:fit-content;
+}
+    .form-fields-container{
+     width:fit-content;
+      margin: 0 2px;
+    }
+    .first-section{
+    display:flex;
+    flex-direction:column;
+   
+    width:75vw;
+   
+    
+    }
+
+     .first-section section:last-child {
+    margin-left: 0;
+  }
+
+  .other-connect-types{
+  display:flex;
+  flex-direction:column;
+    text-align: center; 
+  opacity:0.9;
+  margin:0 10px;
+     
+  
+  }
+  .social-media-connect>ul{
+  
+    text-align:center;
+    margin-left:7rem
+  
+    }
+
+}
 `
