@@ -5,9 +5,9 @@ const AboutUs = () => {
   return (
     <StyledAboutUsDiv>
       <section>
-        <img src={UKCENAGROUPPHOTO} alt="uk-cena-group" />
+        <img className='homeimg' src={UKCENAGROUPPHOTO} alt="uk-cena-group" />
       </section>
-      <section>
+      <section className='about'>
         <h1>Who We Are</h1>
         <section>
           <p>We are the fearless STEM warriors of Congo, on a mission to ignite the flames of curiosity in young minds.</p>

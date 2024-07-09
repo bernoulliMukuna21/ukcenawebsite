@@ -47,7 +47,8 @@ const ConnectWithUs = () => {
           <div className='form-fields-container'>
             <div className='first-section'>
               <section>
-                <input
+                <input 
+                
                   id='name'
                   name='name'
                   value={values.name}
@@ -55,8 +56,7 @@ const ConnectWithUs = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   type='text'
-                  className={errors.name && touched.name ? 'input-error' : ''}
-                />
+                  className={`${errors.name && touched.name ? 'input-error' : ''} first-input`}                />
                 {/* {errors.name && touched.name && <p className='error'>{errors.name}</p>} */}
                 <FormMessage
                   message = { errors.name || '' }
